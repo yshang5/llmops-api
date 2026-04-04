@@ -1,0 +1,16 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find /Users/yueshang/Code/llmops/llmops-api -type d -not -path */env/*)",
+      "Bash(grep -E \"\\\\.\\(md|yaml|yml|json|ini\\)$\")",
+      "Bash(python -c:*)",
+      "mcp__acp__Edit",
+      "Bash(source:*)",
+      "Bash(python3:*)",
+      "mcp__pycharm__search_in_files_by_text",
+      "mcp__pycharm__get_file_problems",
+      "mcp__context7__resolve-library-id",
+      "mcp__context7__query-docs"
+    ]
+  }
+}
