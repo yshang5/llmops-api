@@ -45,11 +45,11 @@ def message(code: HttpCode, msg: str = ""):
     return json(Response(code=code, message=msg, data={}))
 
 
-def success_massage(msg: str = ""):
+def success_message(msg: str = ""):
     return message(code=HttpCode.SUCCESS, msg=msg)
 
 
-def fail_massage(msg: str = ""):
+def fail_message(msg: str = ""):
     return message(code=HttpCode.FAIL, msg=msg)
 
 

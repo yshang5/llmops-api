@@ -10,7 +10,7 @@ from .http_code import HttpCode
 from .response import (
     Response,
     json, success_json, fail_json, validate_error_json,
-    message, success_massage, fail_massage, not_found_message,
+    message, success_message, fail_message, not_found_message,
     unauthorized, forbidden
 )
 
@@ -18,6 +18,6 @@ __all__ = [
     "HttpCode",
     "Response",
     "json", "success_json", "fail_json", "validate_error_json",
-    "message", "success_massage", "fail_massage", "not_found_message",
+    "message", "success_message", "fail_message", "not_found_message",
     "unauthorized", "forbidden"
 ]

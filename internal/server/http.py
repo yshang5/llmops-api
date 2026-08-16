@@ -6,7 +6,11 @@
   @Date    : 2026/3/24
   @Desc    :
 """
+import logging
+import traceback
+
 from flask import Flask
+from flask_cors import CORS
 from flask_migrate import Migrate
 
 from config import Config
@@ -27,6 +31,14 @@ class Http(Flask):
             **kwargs
     ):
         super().__init__(*args, **kwargs)
+        CORS(self, resources={
+            r"*": {
+                "origins": "*",
+                "supports_credentials": True,
+                "methods": ["GET", "POST"],
+                "allow_headers": ["content-type"],
+            }
+        })
         router.register_router(self)
         self.config.from_object(conf)
         # init database and bind to app
@@ -45,9 +57,9 @@ class Http(Flask):
                     data=error.data if error.data else {},
                 )
             )
-        # show raw errors in debug mode only
+        logging.error(traceback.format_exc())
         if self.debug:
-            return error
+            raise error
         return json(Response(
             code=HttpCode.FAIL,
             message=str(error),

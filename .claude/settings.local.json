@@ -10,7 +10,14 @@
       "mcp__pycharm__search_in_files_by_text",
       "mcp__pycharm__get_file_problems",
       "mcp__context7__resolve-library-id",
-      "mcp__context7__query-docs"
+      "mcp__context7__query-docs",
+      "mcp__pycharm__find_files_by_name_keyword",
+      "mcp__pycharm__find_files_by_glob",
+      "Bash(curl:*)",
+      "Bash(env/bin/pip list *)",
+      "Bash(env/bin/pip install *)",
+      "Bash(pip install *)",
+      "Bash(pytest *)"
     ]
   }
 }

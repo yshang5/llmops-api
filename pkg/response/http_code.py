@@ -11,7 +11,7 @@ from enum import Enum
 
 class HttpCode(str, Enum):
     SUCCESS = "success"
-    FAIL = "failed"
+    FAIL = "fail"
     NOT_FOUND = "not found"
     UNAUTHORIZED = "unauthorized"
     FORBIDDEN = "forbidden"
